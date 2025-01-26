@@ -60,3 +60,22 @@ export {
   jobit,
   tripguide,
 };
+// Uncomment if needed
+export const css = null;
+export const docker = null;
+export const figma = null;
+export const git = null;
+export const html = null;
+export const javascript = null;
+export const mongodb = null;
+export const nodejs = null;
+export const reactjs = null;
+export const redux = null;
+export const tailwind = null;
+export const typescript = null;
+export const threejs = null;
+
+export const meta = null;
+export const shopify = null;
+export const starbucks = null;
+export const tesla = null;
