@@ -6,6 +6,8 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import {fadeIn, textVariant} from '../utils/motion';
+import { useNavigate } from 'react-router-dom'; // Add this import
+
 
 const ProjectCard=({index, name, description, tags, image, source_code_link})=>{
   return(
@@ -53,7 +55,11 @@ const ProjectCard=({index, name, description, tags, image, source_code_link})=>{
   )
 }
 
-const Works = () => {
+const Works = ({ count  }) => {
+    const navigate = useNavigate();
+
+  const displayedProjects = count === 0 ? projects : projects.slice(0, count);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -67,17 +73,22 @@ const Works = () => {
             In this portfolio, I present my latest creation that showcases my skills and expertise. Through meticulous design and seamless functionality, I have crafted a remarkable project that captivates users. Explore the immersive experience and discover the harmonious blend of innovation and creativity.
              Join me on this journey as we delve into the intricacies of my project and witness the transformative power of technology.
         </motion.p>
-
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index)=>(
+        {displayedProjects.map((project, index)=>(
           <ProjectCard key={`project-${index}`}
           index={index}
           {...project}/>
         ))}
-
       </div>
 
+                {count !== 0 ? (<button
+            type='button'
+          onClick={() => navigate("/projects")}
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+          >See All project
+
+          </button>):(<></>)}
     </>
   )
 }

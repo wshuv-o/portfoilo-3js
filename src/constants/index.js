@@ -157,6 +157,7 @@ import {
       "Adhere to best practices, coding standards, and quality assurance processes to ensure high-quality deliverables.",
       ]
       },
+      
   ];
   
   const testimonials = [
@@ -218,6 +219,26 @@ import {
       ],
       image: jobit,
       source_code_link: "https://github.com/wshuv-o/Railway-Ticketing-System",
+    },
+        {
+      name: "Foodies",
+      description:"Indulge in a gastronomic journey through our website, your ultimate destination for all things food and recipes. Immerse yourself in a world of culinary wonders as we showcase a myriad of flavors, from traditional favorites to exotic delicacies. Unlock your culinary potential with our extensive collection of recipes and embark on a delicious adventure that will tantalize your taste buds and inspire your inner chef.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "css",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: tripguide,
+      source_code_link: "https://github.com/",
     },
     {
       name: "Foodies",
